@@ -5,6 +5,7 @@ export default defineUserConfig({
     lang: 'zh-CN',
     title: 'YAIEN',
     description: '这是我的第一个 VuePress 站点',
+    dest:'/',
     head: [['link', {rel: 'icon', href: '/images/vite.svg'}]],
     theme: defaultTheme({
         logo:'/images/vite.svg',
@@ -15,12 +16,14 @@ export default defineUserConfig({
             },
             {
                 text: 'TAG',
-                link: '/foo/',
+                link: '/docker/',
             },
             {
                 text: 'BLOG',
                 link: '/foo/',
             }
-        ]
+        ],
+        repoLabel:'GITHUB',
+        repo: 'https://github.com/yaien6530/yaien6530.github.io',
     })
 })
