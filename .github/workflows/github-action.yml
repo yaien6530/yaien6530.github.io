@@ -52,8 +52,10 @@ jobs:
 
       - name: Deploy
         run: |
-          ssh root@yanggl.cn "git config --global --add safe.directory /www/wwwroot/blog"
+          ssh root@yanggl.cn "git config --global --add safe.directory /www/wwwwroot/blog"
+          git push -f root@yanggl.cn:/www/wwwwroot/blog blog
+          ssh root@yanggl.cn "cd /www/wwwwroot/blog && git reset --hard HEAD"
 
       - name: Copy to dist
         run: |
-          ssh root@yanggl.cn "rsync -avz --delete /www/wwwroot/blog/ /usr/local/html/dist/"
+          ssh root@yanggl.cn "rsync -avz --delete /www/wwwwwroot/blog/ /usr/local/html/dist/"
