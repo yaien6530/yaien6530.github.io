@@ -58,4 +58,4 @@ jobs:
 
       - name: Copy to dist
         run: |
-          ssh root@yanggl.cn "rsync -avz --delete /www/wwwwwroot/blog/ /usr/local/html/dist/"
+          ssh root@yanggl.cn "rsync -avz --delete /www/wwwwroot/blog/ /usr/local/html/dist/"
