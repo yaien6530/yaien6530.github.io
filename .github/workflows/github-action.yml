@@ -53,7 +53,7 @@ jobs:
       - name: Deploy
         run: |
           ssh root@yanggl.cn "git config --global --add safe.directory /www/wwwroot/blog"
-          git push -f root@yanggl.cn:/www/wwwroot/blog master
+          git push -f root@yanggl.cn:/www/wwwroot/blog blog
           ssh root@yanggl.cn "cd /www/wwwroot/blog && git reset --hard HEAD"
 
       - name: Copy to dist
