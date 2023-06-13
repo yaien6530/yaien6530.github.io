@@ -20,6 +20,15 @@ jobs:
         with:
           node-version: 16 # 指定node版本
 
+      # 缓存Node.js的模块
+      - name: Cache Node.js modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm  # npm caches files in ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+
       # 编译
       - name: Build Blog
         run: npm install && npm run docs:build
