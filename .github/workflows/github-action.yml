@@ -40,7 +40,7 @@ jobs:
           TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: blog
           FOLDER: src/.vuepress/dist
-          
+
       - name: Install rsync
         run: sudo apt-get install rsync
 
@@ -51,7 +51,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.DEPLOY_KEY }}
           script: |
-            rsync -avz --delete src/.vuepress/dist/ /usr/local/html/dist/
+            rsync -avz --delete ./src/.vuepress/dist/ /usr/local/html/dist/
 
       # 静态文件上传到云服务器
 #      - name: Deploy to Service
