@@ -1,54 +1,33 @@
-name: Deploy
-
-# 触发条件：在 push 到 master 分支后
+name: Auto Deploy
 on:
-  # 每当 push 到 main 分支时触发部署
   push:
     branches:
-      - main
-
-# 任务
+      - master # 只要push到main分支，就会触发后续流程
 jobs:
-  docs:
-    # 服务器环境：最新版 Ubuntu
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 拉取代码
+      # Github官方发布的action，用于clone该仓库的源码到工作流中
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
           persist-credentials: false
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          # 使用 pnpm 安装依赖
-          run_install: true
-
-      - name: Setup Node.js
+      # 在工作流中安装node环境
+      - name: Setup node
         uses: actions/setup-node@v3
         with:
-          # 选择要使用的 node 版本
-          node-version: 18
-          # 缓存 pnpm 依赖
-          cache: pnpm
+          node-version: 16 # 指定node版本
 
-      # 运行构建脚本
-      - name: Build Blog
-        env:
-          NODE_OPTIONS: --max_old_space_size=4096
-        run: pnpm run build:vite
+      # 编译
+      - name: Build
+        run: npm install && npm run docs:build
 
       # 部署
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          REPOSITORY_NAME: yaien6530/yaien6530.github.io
+          TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: blog
-          FOLDER: public
-          #注意这里的 public 是仓库根目录下的 public，也就是 npm run build 生成静态资源的路径，比如有的人是 `docs/.vuepress/dist`
-
+          FOLDER: src/.vuepress/dist

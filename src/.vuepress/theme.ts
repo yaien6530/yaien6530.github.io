@@ -1,3 +1,4 @@
+// @ts-ignore
 import {hopeTheme} from "vuepress-theme-hope";
 import {enNavbar, zhNavbar} from "./navbar";
 import {enSidebar, zhSidebar} from "./sidebar";
@@ -36,7 +37,7 @@ export default hopeTheme({
     navbarAutoHide: "always",
 
     // Github仓库链接
-    repo: "https://github.com/yaien6530/yaien6530.github.io.git",
+    repo: "https://github.com/yaien6530/yaien6530.github.io",
 
     // 页面是否显示编辑此页按钮
     editLink: false,
