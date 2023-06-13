@@ -1,70 +1,69 @@
-name: Auto Deploy
+name: Deploy blog
+
 on:
   push:
     branches:
-      - master # 只要push到main分支，就会触发后续流程
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+      - main
 
+jobs:
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
     steps:
-      # Github官方发布的action，用于clone该仓库的源码到工作流中
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          submodules: true
+          fetch-depth: 0
 
-      # 在工作流中安装node环境
-      - name: Setup Node
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16 # 指定node版本
+          node-version: 18
+          cache: pnpm
 
-      # 缓存Node.js的模块
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm  # npm caches files in ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-
-      # 编译
       - name: Build Blog
-        run: npm install && npm run docs:build
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: pnpm run docs:build
 
-      - name: Check current directory
-        run: pwd
-
-      - name: List build output directory
-        run: ls -al ./src/.vuepress/dist/
-
-      # 部署到 Github Pages
-      - name: Deploy to Github
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: blog
           FOLDER: src/.vuepress/dist
 
-      - name: Install rsync
-        run: sudo apt-get install rsync
-
-      - name: Deploy to Service
-        uses: appleboy/ssh-action@master
+  deploy-server:
+    runs-on: ubuntu-latest
+    needs: deploy-gh-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.DEPLOY_KEY }}
-          script: |
-            rsync -avz --delete src/.vuepress/dist /usr/local/html/dist/
+          ref: blog
+          fetch-depth: 0
 
-      # 静态文件上传到云服务器
-#      - name: Deploy to Service
-#        uses: appleboy/scp-action@master
-#        with:
-#          host: ${{ secrets.SSH_HOST }}
-#          username: ${{ secrets.SSH_USERNAME }}
-#          key: ${{ secrets.DEPLOY_KEY }}
-#          source: "src/.vuepress/dist/*"
-#          target: "/usr/local/html/dist/"
+      - name: Configuration environment
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.GIT_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan yanggl.cn >> ~/.ssh/known_hosts
+          git config --global user.name 'yaien6530'
+          git config --global user.email 'yaien_6530@163.com'
+
+      - name: Deploy
+        run: |
+          ssh git@yanggl.cn "git config --global --add safe.directory /www/wwwroot/blog"
+          git push -f git@yanggl.cn:/www/wwwroot/blog blog
+          ssh git@yanggl.cn "cd /www/wwwroot/blog && git reset --hard HEAD"
+
+      - name: Copy to dist
+        run: |
+          ssh git@yanggl.cn "rsync -avz --delete /www/wwwroot/blog/ /usr/local/html/dist/"
+
