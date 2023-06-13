@@ -66,4 +66,3 @@ jobs:
       - name: Copy to dist
         run: |
           ssh git@yanggl.cn "rsync -avz --delete /www/wwwroot/blog/ /usr/local/html/dist/"
-
