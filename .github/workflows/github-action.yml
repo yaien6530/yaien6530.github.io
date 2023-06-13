@@ -41,13 +41,13 @@ jobs:
           BRANCH: blog
           FOLDER: src/.vuepress/dist
 
-      # 部署到云服务器
+      # 静态文件上传到云服务器
       - name: Deploy to Service
-        uses: appleboy/ssh-action@master
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.DEPLOY_KEY }}
-          script: |
-            mkdir -p /usr/local/html/dist
-            rsync -avz --delete src/.vuepress/dist/ /usr/local/html/dist/
+          source: "src/.vuepress/dist/*"
+          target: "/usr/local/html/dist/"
+
