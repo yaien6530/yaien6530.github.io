@@ -34,19 +34,19 @@ jobs:
 
       # 部署到云服务器
       - name: Deploy Service
-        uses: AEnterprise/rsync-deploy@v1.0
+        uses: easingthemes/ssh-deploy@main
         env:
           # 引用配置，SSH私钥
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
           # rsync参数，排除.pyc文件
-          ARGS: -avz --delete --exclude='*.pyc'
+          ARGS: "-rltgoDzvO"
           # 要推送的文件夹，路径相对于代码仓库的根目录
-          FOLDER: src/.vuepress/dist
-          # 引用配置，服务器端口
-          SERVER_PORT: ${{ secrets.SSH_PORT }}
+          SOURCE: src/.vuepress/dist/
           # 引用配置，服务器的host名（IP或者域名domain.com）
-          SERVER_IP: ${{ secrets.SSH_HOST }}
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          # 引用配置，服务器端口
+          REMOTE_Post: ${{ secrets.SSH_PORT }}
           # 引用配置，服务器登录名
-          USERNAME: ${{ secrets.SSH_USERNAME }}
+          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
           # 部署到目标文件夹
-          SERVER_DESTINATION: /usr/local/html/
+          TARGET: /usr/local/html/dist/
