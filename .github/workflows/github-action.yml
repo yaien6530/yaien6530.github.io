@@ -15,17 +15,17 @@ jobs:
           persist-credentials: false
 
       # 在工作流中安装node环境
-      - name: Setup node
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 16 # 指定node版本
 
       # 编译
-      - name: Build
+      - name: Build Blog
         run: npm install && npm run docs:build
 
       # 部署到 Github Pages
-      - name: Deploy Github
+      - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -33,20 +33,12 @@ jobs:
           FOLDER: src/.vuepress/dist
 
       # 部署到云服务器
-      - name: Deploy Service
-        uses: easingthemes/ssh-deploy@main
-        env:
-          # 引用配置，SSH私钥
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
-          # rsync参数，排除.pyc文件
-          ARGS: "-rltgoDzvO"
-          # 要推送的文件夹，路径相对于代码仓库的根目录
-          SOURCE: src/.vuepress/dist/
-          # 引用配置，服务器的host名（IP或者域名domain.com）
-          REMOTE_HOST: ${{ secrets.SSH_HOST }}
-          # 引用配置，服务器端口
-          REMOTE_Post: ${{ secrets.SSH_PORT }}
-          # 引用配置，服务器登录名
-          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
-          # 部署到目标文件夹
-          TARGET: /usr/local/html/dist/
+      - name: Deploy to Service
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script: |
+            mkdir -p /usr/local/html/dist
+            rsync -avz --delete src/.vuepress/dist/ /usr/local/html/dist/
