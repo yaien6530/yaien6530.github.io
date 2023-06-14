@@ -9,29 +9,9 @@ cover: /assets/images/cover3.jpg
 # 个人介绍
 
 ```card
-title: Mr.Hope
-desc: Where there is light, there is hope
+title: Yaien
+desc: 欢迎来到我的个站
 logo: /assets/images/cover3.jpg
-link: https://mrhope.site
+link: https://yanggl.cn
 color: rgba(253, 230, 138, 0.15)
 ```
-
-```card
-title: Mr.Hope
-desc: Where there is light, there is hope
-logo: https://mrhope.site/logo.svg
-link: https://mrhope.site
-color: rgba(253, 230, 138, 0.15)
-```
-
-```card
-title: Mr.Hope
-desc: Where there is light, there is hope
-logo: https://mrhope.site/logo.svg
-link: https://mrhope.site
-color: rgba(253, 230, 138, 0.15)
-```
-
-# 友链
-
-# 友链
