@@ -13,7 +13,7 @@ export const zhNavbar = navbar([
             {text: "微服务", icon: "cache", link: "microservices/"},
             {text: "数据结构", icon: "material", link: "structure/"},
             {text: "算法", icon: "number", link: "algorithm/"},
-            {text: "其他", icon: "regexp", link: "other/"},
+            {text: "其他", icon: "ask", link: "other/"},
         ]
     },
     {

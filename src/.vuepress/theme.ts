@@ -7,7 +7,6 @@ export default hopeTheme({
 
     // 全局默认作者信息
     author: {
-
         // 作者名字
         name: "Yaien",
 
@@ -42,14 +41,14 @@ export default hopeTheme({
     // 页面是否显示编辑此页按钮
     editLink: false,
 
+    // 是否全局启用路径导航
     breadcrumb: false,
 
+    // 是否在路径导航显示图标
     breadcrumbIcon: false,
 
+    // 是否在桌面模式下显示打印按钮
     print: false,
-
-    // 文档在仓库中的目录
-    docsDir: "docs",
 
     // 博客功能配置
     blog: {
@@ -65,9 +64,6 @@ export default hopeTheme({
             // Weibo: "https://example.com",
         },
 
-        // 博主头像
-        // avatar: '/assets/images/avatar/avatar_3.png',
-
         // 剪裁头像为圆形的
         roundAvatar: true,
 
@@ -75,41 +71,28 @@ export default hopeTheme({
         articleInfo: ["Date", "Tag", "Original"],
 
         // 每页展示文章数量
-        articlePerPage: 4
+        articlePerPage: 10
     },
 
     // 国际化语言支持
     locales: {
         "/": {
-            // navbar
             navbar: zhNavbar,
-
-            // sidebar
             sidebar: zhSidebar,
-
             footer: "<a href=\"https://beian.miit.gov.cn/\">桂ICP备2022011356号-1</a>",
-
             displayFooter: true,
-
             blog: {
-                // 口号、座右铭或介绍语
                 description: "披荆斩棘 勇往直前",
             },
         },
 
         "/en/": {
             navbar: enNavbar,
-
             sidebar: enSidebar,
-
             footer: "<a href=\"https://beian.miit.gov.cn/\">桂ICP备2022011356号-1</a>",
-
             displayFooter: true,
-
             blog: {
-                // 口号、座右铭或介绍语
                 description: "A JAVA developer who wants to stand at the top of the industry pyramid",
-                // 个人介绍页地址
                 intro: "/en/intro.html",
             },
         },
@@ -117,112 +100,27 @@ export default hopeTheme({
 
     // 插件配置
     plugins: {
-        blog: true,
-
-        components: {
-            // components: [
-            //     "BiliBili",
-            //     "CodePen",
-            //     "FontIcon",
-            //     "PDF",
-            //     "Replit",
-            //     "Share"
-            // ],
-            // componentOptions: {
-            //     share: {
-            //         services: [
-            //             "qq",
-            //             "email",
-            //             "weibo"
-            //         ],
-            //     }
-            // }
+        blog: {
+            excerptLength: 0
         },
-
-        // all features are enabled for demo, only preserve features you need here
         mdEnhance: {
-            align: true,
-            attrs: true,
-            chart: true,
             card: true,
-            codetabs: true,
-            demo: true,
-            echarts: true,
-            figure: true,
-            flowchart: true,
             gfm: true,
+            figure: true,
             imgLazyload: true,
-            imgSize: true,
-            include: true,
-            katex: true,
-            mark: true,
-            mermaid: true,
-            playground: {
-                presets: ["ts", "vue"],
-            },
-            sub: true,
-            sup: true,
-            tabs: true,
-            vPre: true,
-            vuePlayground: true,
         },
-
-        // uncomment these if you want a PWA
-        // pwa: {
-        //   favicon: "/favicon.ico",
-        //   cacheHTML: true,
-        //   cachePic: true,
-        //   appendBase: true,
-        //   apple: {
-        //     icon: "/assets/icon/apple-icon-152.png",
-        //     statusBarColor: "black",
-        //   },
-        //   msTile: {
-        //     image: "/assets/icon/ms-icon-144.png",
-        //     color: "#ffffff",
-        //   },
-        //   manifest: {
-        //     icons: [
-        //       {
-        //         src: "/assets/icon/chrome-mask-512.png",
-        //         sizes: "512x512",
-        //         purpose: "maskable",
-        //         type: "image/png",
-        //       },
-        //       {
-        //         src: "/assets/icon/chrome-mask-192.png",
-        //         sizes: "192x192",
-        //         purpose: "maskable",
-        //         type: "image/png",
-        //       },
-        //       {
-        //         src: "/assets/icon/chrome-512.png",
-        //         sizes: "512x512",
-        //         type: "image/png",
-        //       },
-        //       {
-        //         src: "/assets/icon/chrome-192.png",
-        //         sizes: "192x192",
-        //         type: "image/png",
-        //       },
-        //     ],
-        //     shortcuts: [
-        //       {
-        //         name: "Demo",
-        //         short_name: "Demo",
-        //         url: "/demo/",
-        //         icons: [
-        //           {
-        //             src: "/assets/icon/guide-maskable.png",
-        //             sizes: "192x192",
-        //             purpose: "maskable",
-        //             type: "image/png",
-        //           },
-        //         ],
-        //       },
-        //     ],
-        //   },
-        // },
+        comment: {
+            provider: "Giscus",
+            repo: "yaien6530/blog-giscus",
+            repoId: "R_kgDOJvOJXQ",
+            category: "Announcements",
+            categoryId: "DIC_kwDOJvOJXc4CXM6Q"
+        },
+        copyright: {
+            global: true,
+            author: "Yaien",
+            license: "MIT"
+        }
     }
 }, {
     // 启用自定义
