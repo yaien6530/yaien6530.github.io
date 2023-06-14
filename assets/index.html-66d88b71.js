@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-9e0b104a","path":"/en/tag/openai/","title":"OpenAI Tag","lang":"zh-CN","frontmatter":{"title":"OpenAI Tag","index":false,"feed":false,"sitemap":false,"blog":{"type":"category","name":"OpenAI","key":"tag"},"layout":"BlogCategory"},"headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null,"excerpt":""}');export{e as data};

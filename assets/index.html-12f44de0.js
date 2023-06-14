@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-41e6b632","path":"/note/framework/springmvc/base/","title":"Base","lang":"zh-CN","frontmatter":{"title":"Base","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};

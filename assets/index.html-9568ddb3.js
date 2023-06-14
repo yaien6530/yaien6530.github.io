@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-31c4e89d","path":"/en/tag/linux/","title":"linux Tag","lang":"zh-CN","frontmatter":{"title":"linux Tag","index":false,"feed":false,"sitemap":false,"blog":{"type":"category","name":"linux","key":"tag"},"layout":"BlogCategory"},"headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null,"excerpt":""}');export{e as data};

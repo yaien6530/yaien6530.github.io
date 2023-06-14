@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-c37cff42","path":"/note/java/concurrency/lock/","title":"Lock","lang":"zh-CN","frontmatter":{"title":"Lock","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-5c743294","path":"/note/microservices/zookeeper/","title":"Zookeeper","lang":"zh-CN","frontmatter":{"title":"Zookeeper","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};

@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-e2850a42","path":"/en/tutorial/linux/","title":"Linux","lang":"zh-CN","frontmatter":{"title":"Linux","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null,"excerpt":"\\n"}');export{e as data};
