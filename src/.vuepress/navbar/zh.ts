@@ -28,6 +28,6 @@ export const zhNavbar = navbar([
     {text: "随笔", icon: "edit", link: "/informal/"},
     {text: "书籍", icon: "study", link: "/books/"},
     {text: "教程", icon: "write", link: "/tutorial/"},
-    {text: "软考", icon: "write", link: "/software/"},
+    {text: "软考", icon: "repo", link: "/software/"},
     {text: "关于我", icon: "people", link: "/intro.md"}
 ]);

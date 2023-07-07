@@ -3,6 +3,7 @@ article: false
 timeline: false
 pageInfo: false
 toc: false
+comment: false
 cover: /assets/images/cover3.jpg
 ---
 
