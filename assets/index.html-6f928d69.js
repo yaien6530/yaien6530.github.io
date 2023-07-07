@@ -1,1 +1,0 @@
-import{_ as e,Q as t,a2 as n,a3 as _}from"./framework-27238c07.js";const c={},o=_("p",null,"书籍列表 书籍列表",-1),s=[o];function a(r,l){return t(),n("div",null,s)}const i=e(c,[["render",a],["__file","index.html.vue"]]);export{i as default};

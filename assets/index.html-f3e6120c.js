@@ -1,0 +1,1 @@
+import{_ as e,Q as t,a3 as n,a4 as _}from"./framework-94ca7993.js";const c={},o=_("p",null,"书籍列表 书籍列表",-1),s=[o];function a(r,l){return t(),n("div",null,s)}const i=e(c,[["render",a],["__file","index.html.vue"]]);export{i as default};

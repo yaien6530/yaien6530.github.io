@@ -1,1 +1,0 @@
-import{_ as a,Q as t,a2 as c,a3 as e,a4 as r}from"./framework-27238c07.js";const s={},o=e("h1",{id:"服务发现",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#服务发现","aria-hidden":"true"},"#"),r(" 服务发现")],-1),_=[o];function n(d,i){return t(),c("div",null,_)}const l=a(s,[["render",n],["__file","2305232045.html.vue"]]);export{l as default};
