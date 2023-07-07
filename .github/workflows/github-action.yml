@@ -54,7 +54,7 @@ jobs:
         run: |
           ssh root@yanggl.cn "cd /www/wwwroot/blog/"
           git push -f root@yanggl.cn:/www/wwwroot/blog blog          
-          ssh root@yanggl.cn "cd /www/wwwroot/blog && git checkout  blog && git reset --hard HEAD"
+          ssh root@yanggl.cn "cd /www/wwwroot/blog && git reset --hard HEAD"
 
       - name: Copy to dist
         run: |
