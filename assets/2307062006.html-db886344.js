@@ -65,7 +65,7 @@ jobs:
         run: <span class="token operator">|</span>
           <span class="token function">ssh</span> root@yanggl.cn <span class="token string">&quot;cd /www/wwwroot/blog/&quot;</span>
           <span class="token function">git</span> push <span class="token parameter variable">-f</span> root@yanggl.cn:/www/wwwroot/blog blog          
-          <span class="token function">ssh</span> root@yanggl.cn <span class="token string">&quot;cd /www/wwwroot/blog &amp;&amp; git checkout  blog &amp;&amp; git reset --hard HEAD&quot;</span>
+          <span class="token function">ssh</span> root@yanggl.cn <span class="token string">&quot;cd /www/wwwroot/blog &amp;&amp; git reset --hard HEAD&quot;</span>
 
       - name: Copy to dist
         run: <span class="token operator">|</span>
