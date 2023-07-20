@@ -55,8 +55,12 @@ jobs:
           ssh root@yanggl.cn "git config --global --add safe.directory /www/wwwroot/yaien"
           ssh root@yanggl.cn "cd /www/wwwroot/yaien"
           git push -f root@yanggl.cn:/www/wwwroot/yaien blog
-          ssh root@yanggl.cn "cd /www/wwwroot/yaien && git reset --hard HEAD"
+          ssh root@yanggl.cn "cd /www/wwwroot/yaien && git checkout blog && git reset --hard HEAD"
 
       - name: Copy to dist
         run: |
           ssh root@yanggl.cn "rsync -avz --delete /www/wwwroot/yaien/ /usr/share/nginx/html/"
+
+      - name: Reset
+        run: |
+          ssh root@yanggl.cn "cd /www/wwwroot && rm -rf yaien/ && mkdir yaien && cd yaien && git init"
