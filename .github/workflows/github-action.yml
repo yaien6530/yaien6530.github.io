@@ -52,6 +52,7 @@ jobs:
 
       - name: Deploy
         run: |
+          ssh root@yanggl.cn "git config --global --add safe.directory /www/wwwroot/yaien"
           ssh root@yanggl.cn "cd /www/wwwroot/yaien"
           git push -f root@yanggl.cn:/www/wwwroot/yaien blog
           ssh root@yanggl.cn "cd /www/wwwroot/yaien && git reset --hard HEAD"
