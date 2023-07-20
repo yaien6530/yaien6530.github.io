@@ -16,5 +16,5 @@ title: Yaien
 desc: 欢迎来到我的个站
 logo: /assets/images/cover3.jpg
 link: https://yanggl.cn
-color: rgba(253, 230, 138, 0.15)
+color: rgba(253, 230, 137, 0.15)
 ```
