@@ -58,10 +58,8 @@ jobs:
           # 服务器密码
           password: ${{ secrets.SERVER_PASSWORD }}
           # 指定上传的文件目录(项目配置的打包目录名称)
-          source: './*'
+          source: '/'
           # 指定上传服务器目录
           target: '/www/wwwroot/yaien'
           # 解压时覆盖现有文件
           overwrite: true
-          # 删除指定数量的前导路径元素
-          strip_components: 1
