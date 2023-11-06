@@ -162,7 +162,5 @@ export const zhSidebar = sidebar({
     "/note/structure/": "structure",
     "/note/algorithm/": "structure",
     "/note/other/": "structure",
-    "/tutorial/": "structure",
-    "/books/": "structure",
     "/informal-essay/": "structure",
 });

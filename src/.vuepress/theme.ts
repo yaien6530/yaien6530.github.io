@@ -8,7 +8,7 @@ export default hopeTheme({
     // 全局默认作者信息
     author: {
         // 作者名字
-        name: "Yaien",
+        name: "Yaien Blog",
 
         // 作者网站
         url: "https://yanggl.cn",
@@ -55,13 +55,10 @@ export default hopeTheme({
         // 博主媒体展示
         medias: {
             // Email: "mailto:info@example.com",
-            // GitHub: "https://example.com",
-            // Gmail: "mailto:info@example.com",
-            // QQ: "2549597630",
-            // Qzone: "https://example.com",
-            // Reddit: "https://example.com",
-            // Wechat: "https://example.com",
-            // Weibo: "https://example.com",
+            GitHub: "https://example.com",
+            Gmail: "mailto:info@example.com",
+            QQ: "2549597630",
+            Wechat: "https://example.com",
         },
 
         // 剪裁头像为圆形的
@@ -71,7 +68,8 @@ export default hopeTheme({
         articleInfo: ["Date", "Tag", "Original"],
 
         // 每页展示文章数量
-        articlePerPage: 10
+        articlePerPage: 10,
+
     },
 
     // 国际化语言支持
@@ -79,10 +77,11 @@ export default hopeTheme({
         "/": {
             navbar: zhNavbar,
             sidebar: zhSidebar,
-            footer: "<a href=\"https://beian.miit.gov.cn/\">桂ICP备2022011356号-1</a>",
+            footer: "<a style='color: #666;font-size: 13px;margin: 6px 0' href=\"https://beian.miit.gov.cn/\">桂ICP备2022011356号-1</a>",
             displayFooter: true,
             blog: {
                 description: "披荆斩棘 勇往直前",
+                intro: "/about/me.html",
             },
         },
 
@@ -108,6 +107,9 @@ export default hopeTheme({
             gfm: true,
             figure: true,
             imgLazyload: true,
+            playground: {
+                presets: ["ts", "vue"],
+            },
         },
         comment: {
             provider: "Giscus",

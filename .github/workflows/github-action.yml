@@ -6,23 +6,23 @@ on:
       - master
 
 jobs:
-  deploy-gh-pages:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          submodules: true
-          fetch-depth: 0
           persist-credentials: false
 
-      - name: Setup Node
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: "16.15.1"
 
-      - name: Build Blog
-        run: npm install && npm run docs:build
+      - name: Install and Build
+        run: |
+          yarn install
+          yarn docs:build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
@@ -33,34 +33,20 @@ jobs:
 
   deploy-server:
     runs-on: ubuntu-latest
-    needs: deploy-gh-pages
+    needs: build-and-deploy
     steps:
-      - name: Checkout
+      - name: Checkout Blog
         uses: actions/checkout@v3
         with:
           ref: blog
           fetch-depth: 0
 
-      - name: Configuration environment
-        run: |
-          mkdir -p ~/.ssh/
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan yanggl.cn >> ~/.ssh/known_hosts
-          git config --global user.name 'yaien6530'
-          git config --global user.email 'yaien_6530@163.com'
-
-      - name: Deploy
-        run: |
-          ssh root@yanggl.cn "git config --global --add safe.directory /www/wwwroot/yaien"
-          ssh root@yanggl.cn "cd /www/wwwroot/yaien"
-          git push -f root@yanggl.cn:/www/wwwroot/yaien blog
-          ssh root@yanggl.cn "cd /www/wwwroot/yaien && git checkout blog && git reset --hard HEAD"
-
-      - name: Copy to dist
-        run: |
-          ssh root@yanggl.cn "rsync -avz --delete /www/wwwroot/yaien/ /usr/share/nginx/html/"
-
-      - name: Reset
-        run: |
-          ssh root@yanggl.cn "cd /www/wwwroot && rm -rf yaien/ && mkdir yaien && cd yaien && git init"
+      - name: Upload to Deploy Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          source: './*'
+          target: '/www/wwwroot/yaien'
+          overwrite: true
