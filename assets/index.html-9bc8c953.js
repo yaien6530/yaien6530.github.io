@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-e025c652","path":"/note/java/jvm/","title":"Jvm","lang":"zh-CN","frontmatter":{"title":"Jvm","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-76bd8bc4","path":"/note/algorithm/","title":"Algorithm","lang":"zh-CN","frontmatter":{"title":"Algorithm","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};

@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-5b721b4a","path":"/note/framework/springboot/","title":"Springboot","lang":"zh-CN","frontmatter":{"title":"Springboot","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};

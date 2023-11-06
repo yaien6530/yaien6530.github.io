@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-6a12e6a2","path":"/note/microservices/dubbo/","title":"Dubbo","lang":"zh-CN","frontmatter":{"title":"Dubbo","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};

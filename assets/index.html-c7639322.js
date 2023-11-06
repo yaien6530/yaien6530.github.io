@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-519d06c2","path":"/note/java/concurrency/atomic/","title":"Atomic","lang":"zh-CN","frontmatter":{"title":"Atomic","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};

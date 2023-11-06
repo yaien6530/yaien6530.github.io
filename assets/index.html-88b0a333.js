@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-2a2b904c","path":"/note/db/mysql/","title":"Mysql","lang":"zh-CN","frontmatter":{"title":"Mysql","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};

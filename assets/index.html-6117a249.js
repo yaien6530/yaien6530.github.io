@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-3fd38ebe","path":"/note/framework/springboot/plugin/","title":"Plugin","lang":"zh-CN","frontmatter":{"title":"Plugin","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};
