@@ -1,4 +1,4 @@
-name: Build and Deploy Blog
+name: Deploy blog
 
 # 监听 master 分支上的 push 事件
 on:
@@ -39,7 +39,7 @@ jobs:
 
   deploy-server:
     runs-on: ubuntu-latest
-    needs: deploy-gh-pages
+    needs: build-and-deploy
     steps:
       - name: Checkout Blog
         uses: actions/checkout@v3
