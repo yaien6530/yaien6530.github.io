@@ -41,32 +41,6 @@ color: rgba(253, 230, 135, 0.15)
 
 :::
 
-## 大数据
-
-```card
-title: Yaien
-desc: 欢迎来到我的个站
-logo: /assets/images/cover3.jpg
-link: https://yanggl.cn
-color: rgba(253, 230, 135, 0.15)
-```
-
-```card
-title: Yaien
-desc: 欢迎来到我的个站
-logo: /assets/images/cover3.jpg
-link: https://yanggl.cn
-color: rgba(253, 230, 135, 0.15)
-```
-
-```card
-title: Yaien
-desc: 欢迎来到我的个站
-logo: /assets/images/cover3.jpg
-link: https://yanggl.cn
-color: rgba(253, 230, 135, 0.15)
-```
-
 ## 在线工具
 
 ::: card
@@ -74,7 +48,7 @@ color: rgba(253, 230, 135, 0.15)
 ```card
 title: ProcessOn
 desc: 免费在线流程图思维导图
-logo: /assets/images/cover3.jpg
+logo: /ico/processon.ico
 link: https://www.processon.com/
 color: rgba(253, 230, 135, 0.15)
 ```
@@ -82,7 +56,7 @@ color: rgba(253, 230, 135, 0.15)
 ```card
 title: 有道云笔记
 desc: 专业强大的编辑器，支持5种文稿类型，随心所欲开启顺滑的创作编辑体验
-logo: /ico/youdao.jpg
+logo: /ico/youdao.ico
 link: https://note.youdao.com/
 color: rgba(253, 230, 135, 0.15)
 ```
@@ -91,3 +65,30 @@ color: rgba(253, 230, 135, 0.15)
 
 ## 语言大模型
 
+::: card
+
+```card
+title: ChatGpt
+desc: 美国人工智能研究实验室OpenAI推出的一种人工智能技术驱动的自然语言处理工具
+logo: /ico/chatgpt.png
+link: https://openai.com/
+color: rgba(253, 230, 135, 0.15)
+```
+
+```card
+title: 文心一言
+desc: 百度全新一代知识增强大语言模型，文心大模型家族的新成员
+logo: /ico/wenxin.png
+link: https://note.youdao.com/
+color: rgba(253, 230, 135, 0.15)
+```
+
+```card
+title: 通义千问
+desc: 阿里云推出的一个超大规模的语言模型
+logo: /ico/qianwen.png
+link: https://note.youdao.com/
+color: rgba(253, 230, 135, 0.15)
+```
+
+:::
