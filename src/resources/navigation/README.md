@@ -76,6 +76,14 @@ color: rgba(253, 230, 135, 0.15)
 ```
 
 ```card
+title: 智谱清言
+desc: 基于智谱AI自主研发的中英双语对话模型ChatGLM2，经过万亿字符的文本与代码预训练，并采用有监督微调技术，以通用对话的形式为用户提供智能化服务
+logo: /ico/zhipu.svg
+link: https://chatglm.cn/
+color: rgba(253, 230, 135, 0.15)
+```
+
+```card
 title: 文心一言
 desc: 百度全新一代知识增强大语言模型，文心大模型家族的新成员
 logo: /ico/wenxin.png
