@@ -1,1 +1,0 @@
-import{_ as t,o as a,c,a as e,b as o}from"./app-7b144a51.js";const r={},s=e("h1",{id:"个人简介",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#个人简介","aria-hidden":"true"},"#"),o(" 个人简介")],-1),n=[s];function _(d,i){return a(),c("div",null,n)}const l=t(r,[["render",_],["__file","me.html.vue"]]);export{l as default};
