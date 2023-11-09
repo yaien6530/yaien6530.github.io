@@ -1,0 +1,1 @@
+import{_ as t,o as a,c,a as e,b as o}from"./app-a62e1212.js";const r={},s=e("h1",{id:"更新内容",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#更新内容","aria-hidden":"true"},"#"),o(" 更新内容")],-1),n=[s];function _(d,i){return a(),c("div",null,n)}const l=t(r,[["render",_],["__file","update.html.vue"]]);export{l as default};
