@@ -61,6 +61,14 @@ link: https://note.youdao.com/
 color: rgba(253, 230, 135, 0.15)
 ```
 
+```card
+title: GCeasy
+desc: 业内首款借助机器学习技术引导的垃圾回收日志分析工具。GCeasy 内置有智能功能，可自动检测 JVM 和 Android GC 日志中的问题并推荐解决方案。
+logo: /ico/gc-easy.ico
+link: https://gceasy.ycrash.cn/
+color: rgba(253, 230, 135, 0.15)
+```
+
 :::
 
 ## 语言大模型
@@ -87,7 +95,7 @@ color: rgba(253, 230, 135, 0.15)
 title: 文心一言
 desc: 百度全新一代知识增强大语言模型，文心大模型家族的新成员
 logo: /ico/wenxin.png
-link: https://note.youdao.com/
+link: https://yiyan.baidu.com/
 color: rgba(253, 230, 135, 0.15)
 ```
 
@@ -96,6 +104,20 @@ title: 通义千问
 desc: 阿里云推出的一个超大规模的语言模型
 logo: /ico/qianwen.png
 link: https://note.youdao.com/
+color: rgba(253, 230, 135, 0.15)
+```
+
+:::
+
+## 学习
+
+::: card
+
+```card
+title: Z-Library
+desc: 好用、免费的电子书获取网站
+logo: /ico/Z-Library.png
+link: https://zh.zlibrary-east.se/
 color: rgba(253, 230, 135, 0.15)
 ```
 
