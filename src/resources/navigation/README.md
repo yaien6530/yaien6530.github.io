@@ -103,7 +103,7 @@ color: rgba(253, 230, 135, 0.15)
 title: 通义千问
 desc: 阿里云推出的一个超大规模的语言模型
 logo: /ico/qianwen.png
-link: https://note.youdao.com/
+link: https://qianwen.aliyun.com/
 color: rgba(253, 230, 135, 0.15)
 ```
 
