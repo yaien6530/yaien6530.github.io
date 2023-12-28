@@ -1,0 +1,1 @@
+import{_ as t,o as a,c as r,a as e,b as c}from"./app-788fdfee.js";const n={},o=e("h1",{id:"我的好友",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#我的好友","aria-hidden":"true"},"#"),c(" 我的好友")],-1),s=[o];function _(d,i){return a(),r("div",null,s)}const h=t(n,[["render",_],["__file","friend.html.vue"]]);export{h as default};
