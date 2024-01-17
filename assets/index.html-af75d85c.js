@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-65f4a756","path":"/note/net/","title":"Net","lang":"zh-CN","frontmatter":{"title":"Net","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null,"excerpt":"","copyright":{"author":"Yaien","license":"MIT"}}');export{e as data};
