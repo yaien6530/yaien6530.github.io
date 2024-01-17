@@ -11,15 +11,19 @@ export const zhSidebar = sidebar({
             link: "algorithm/"
         },
         {
+            text: "网络编程",
+            link: "net/",
+        },
+        {
             text: "JAVA",
             link: "java/",
         },
         {
-            text: "数据库相关",
+            text: "数据库",
             link: "db/",
         },
         {
-            text: "微服务相关",
+            text: "微服务",
             link: "microservices/",
         },
         {
@@ -161,6 +165,7 @@ export const zhSidebar = sidebar({
     ],
     "/note/structure/": "structure",
     "/note/algorithm/": "structure",
+    "/note/net/": "structure",
     "/note/other/": "structure",
     "/informal-essay/": "structure",
 });
