@@ -1,1 +1,0 @@
-import{_ as t,o as a,c,a as e,b as o}from"./app-6a63891c.js";const r={},s=e("h1",{id:"垃圾收集之g1",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#垃圾收集之g1","aria-hidden":"true"},"#"),o(" 垃圾收集之G1")],-1),_=[s];function n(d,i){return a(),c("div",null,_)}const l=t(r,[["render",n],["__file","2403032005.html.vue"]]);export{l as default};
